@@ -1,0 +1,12 @@
+data
+
+*.pyc
+*.pdf
+*.png
+
+!images/*
+
+work*
+output*
+
+MUJOCO_LOG.TXT
