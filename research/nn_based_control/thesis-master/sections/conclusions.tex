@@ -1,0 +1,148 @@
+\chapter{Conclusions and Future Directions}
+\label{sec:conclusions}
+
+In this thesis we have introduced new building blocks and
+fundamental components for machine learning that enable
+optimization-based domain knowledge to be injected
+into the modeling pipeline.
+We have presented the \emph{OptNet} architecture as a
+foundation for convex optimization layers and the
+\emph{input-convex neural network} architecture as a
+foundation for deep convex energy-based learning.
+We have shown how the OptNet approach can be applied to
+differentiable model-predictive control and
+top-$k$ learning.
+To enable rapid prototyping in this space, we have shown
+how \cvxpy can be turned into a differentiable layer.
+Differentiable optimization provides an expressive set of
+operations and have a promising set of future directions.
+In the following we provide a brief outlook of how optimization-based
+modeling benefits seven application areas,
+and we highlight a few key references in this space.
+
+\begin{enumerate}
+\item \textbf{Game theory.}
+  The game theory literature typically focuses on finding
+  optimal strategies of playing games with known rules.
+  While the rules of a lot of games are known explicitly,
+  scenarios could come up where it's useful to learn the
+  rules of a game and to have a ``game theory''
+  equilibrium-finding layer.
+  For example in reinforcement learning, an agent can have an
+  arbitrary differentiable ``game theory'' layer that is able
+  of representing complex tasks, state spaces, and
+  problems as an equilibrium-finding problem in a game
+  where the rules are automatically extracted.
+  This is explored in
+  \citet{ling2018game}.
+\item \textbf{Stochastic optimization and end-to-end learning.}
+  Typically probabilistic models are used in the context of
+  larger systems. When these systems have an objective
+  that is being optimized, it is usually ideal to incorporate
+  the knowledge of this objective into the probabilistic modeling
+  component.
+  If the downstream systems involve solving
+  stochastic optimization problems, as in power-systems,
+  creating an end-to-end differentiable architecture is
+  more difficult and can be done by using
+  differentiable optimization as in \citet{donti2017task}.
+  \newpage
+\item \textbf{Reinforcement learning and control.}
+  \begin{itemize}
+  \item \textbf{Safety.} RL agents may be deployed in scenarios when
+    the agent should avoid parts of the state space,
+    \eg in safety-critical environments.
+    Differentiable optimization layers can be used
+    to help constrain the policy class so that these
+    regions are avoided.
+    This is explored in
+    \citet{dalal2018safe,pham2018optlayer}.
+  \item \textbf{Differentiable control and planning.}
+    The differentiable MPC approach we presented in \cref{sec:empc}
+    is just one step towards a significantly broader vision
+    of integrating control and learning for doing imitation
+    or policy learning.
+  \item \textbf{Physics-based modeling.}
+    When RL environments involve physical systems,
+    it may be useful to have a physics-based modeling.
+    This can be done with a differentiable
+    physics engines as in \citet{de2018end}.
+  \item \textbf{Inverse cost and reward learning.}
+    Given observed trajectories in an imitation learning
+    setup, modeling agents as controllers that are
+    optimizing an objective is a powerful paradigm
+    \citep{ng2000algorithms,finn2016guided}.
+    Differentiable controllers
+    are useful when trying to reconstruct an optimization
+    problem that other agents are solving.
+    This is done in the context of cost shaping in
+    \citet{tamar2017learning}.
+  \item \textbf{Multi-agent environments.}
+    In multi-agent environments, other agents can be modeled
+    as entities that are solving control optimization or
+    other learning problems.
+    This knowledge can be integrated into the learning
+    procedure as in \citet{foerster2018learning}.
+  \item \textbf{Control in high-dimensional state spaces.}
+    Control in high-dimensional state spaces such as visual
+    spaces is challenging and it is typically useful
+    to extract a lower-dimensional latent space from
+    the original feature space.
+    This is typically done by either hand-engineering
+    a feature extractor, or by learning an embedding
+    with an unsupervised learning method as in
+    \citet{watter2015embed,kurutach2018learning}.
+    Viewing controllers as differentiable entities is
+    reasonable for embedding states because the cost
+    function of the controller can be parameterized to
+    learn a cost associated with the latent representation.
+  \end{itemize}
+\item \textbf{Discrete, combinatorial, and submodular optimization.}
+  The space of discrete, combinatorial, and mixed optimization problems
+  captures an even more expressive set of operations than
+  the continuous and convex optimization problems we have considered
+  in this thesis.
+  Similar optimization components can be made for some of these
+  types of problems and is explored in
+  \citet{djolonga2017differentiable,tschiatschek2018differentiable,mensch2018differentiable,niculae2018sparsemap,niculae2017regularized}.
+  \newpage
+\item \textbf{Meta-learning.}
+  Some meta-learning formulations such as \citet{finn2017model}
+  and \citet{ravi2016optimization}
+  involve learning through an unrolled optimizer that
+  typically solve an unconstrained, continuous, and
+  non-convex optimization problem.
+  In some cases, unrolling through a solver with
+  many iterations may require inefficient amounts
+  of compute or memory.
+  Meta-learning methods can be improved by using
+  differentiable closed-form solvers, as done in
+  MetaOptNet \citep{lee2019meta} with a differentiable SVM layer
+  and in \citet{bertinetto2018meta} with differentiable ridge
+  and logistic regression.
+\item \textbf{Optimization viewpoints of standard components.}
+  A motivation behind this thesis work has been the optimization
+  viewpoints of standard layers we discussed in \cref{sec:bg:existing}.
+  Many other directions can be taken with the viewpoints, such
+  as the proximal operator viewpoint in \citet{bibi2018deep}
+  that interprets deep layers as stochastic solvers.
+\item \textbf{Hyper-parameter and generalization optimization.}
+  The learning procedure for many linear machine learning models
+  can be interpreted as the solution to a convex
+  optimization problem over the loss function.
+  This convex learning process can therefore also be
+  made differentiable and used for optimizing the hyper-parameters
+  of these algorithms. This is done in
+  \citet{barratt2018optimizing} to optimize the cross-validation
+  risk of convex formulations, including logistic regression,
+  SVMs, and elastic net regression;
+  for least squares in \citet{barratt2019least};
+  and SVMs in \citet{lee2019meta}.
+\end{enumerate}
+
+%%% Local Variables:
+%%% coding: utf-8
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: "../thesis"
+%%% End:
