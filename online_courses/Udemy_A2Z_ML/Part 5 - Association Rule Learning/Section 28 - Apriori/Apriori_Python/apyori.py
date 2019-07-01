@@ -21,7 +21,7 @@ __author_email__ = 'ymoch.dev@gmail.com'
 
 
 ################################################################################
-# Data structures.
+# data_load_forecast structures.
 ################################################################################
 class TransactionManager(object):
     """

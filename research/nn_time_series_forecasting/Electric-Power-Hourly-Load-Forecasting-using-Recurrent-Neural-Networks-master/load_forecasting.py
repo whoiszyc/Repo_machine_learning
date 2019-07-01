@@ -34,7 +34,7 @@ matrix_load = convertSeriesToMatrix(list_hourly_load, sequence_length)
 matrix_load = np.array(matrix_load)
 shifted_value = matrix_load.mean()
 matrix_load -= shifted_value
-print ("Data  shape: ", matrix_load.shape)
+print ("data_load_forecast  shape: ", matrix_load.shape)
 
 # split dataset: 90% for training and 10% for testing
 train_row = int(round(0.9 * matrix_load.shape[0]))

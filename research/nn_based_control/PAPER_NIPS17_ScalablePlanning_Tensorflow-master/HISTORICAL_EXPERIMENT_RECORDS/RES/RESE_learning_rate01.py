@@ -30,7 +30,7 @@ def PathFinder(path):
     print(fullpath)
     return fullpath
 
-#Read Data for Deep Learning
+#Read data_load_forecast for Deep Learning
 def ReadData(path):
     fullpath=PathFinder(path)
     return pd.read_csv(fullpath, sep=',', header=0)

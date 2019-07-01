@@ -9,7 +9,7 @@ def normalize(X):
     std = np.std(X, axis=0)
     X = (X - mean) / std
     return X
-# Data
+# data_load_forecast
 boston = tf.contrib.learn.datasets.load_dataset('boston')
 X_train, Y_train = boston.data, boston.target
 X_train = normalize(X_train)
@@ -20,7 +20,7 @@ n = 13   # Number of features
 
 #print(X_train)
 
-# Placeholder for the Training Data
+# Placeholder for the Training data_load_forecast
 X = tf.placeholder(tf.float32, name='X', shape=[m,n])
 Y = tf.placeholder(tf.float32, name='Y')
 
@@ -66,8 +66,8 @@ print('Predicted value: ${0}  Actual value: ${1}'.format(Y_pred[0]*1000, Y_train
 # fig = plt.figure()
 # ax = Axes3D(fig)
 # ax.scatter(X_train[0], X_train[1], Y_train)
-# plt.plot(X_train, Y_train, 'bo', label='Real Data')
-# plt.plot(X_train,Y_pred,  'r', label='Predicted Data')
+# plt.plot(X_train, Y_train, 'bo', label='Real data_load_forecast')
+# plt.plot(X_train,Y_pred,  'r', label='Predicted data_load_forecast')
 # plt.legend()
 # plt.show()
 #

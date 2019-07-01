@@ -1,5 +1,5 @@
 """
-Optional: Data Parallelism
+Optional: data_load_forecast Parallelism
 ==========================
 **Authors**: `Sung Kim <https://github.com/hunkim>`_ and `Jenny Kang <https://github.com/jennykang>`_
 

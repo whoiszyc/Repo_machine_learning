@@ -266,7 +266,7 @@ def main():
 
             if(not(print_minimal)):
                 print("\n#####################################")
-                print("Data formatting: create inputs and labels for NN ")
+                print("data_load_forecast formatting: create inputs and labels for NN ")
                 print("#####################################\n")
 
             dataX , dataY = generate_training_data_inputs(states, controls)

@@ -1,5 +1,5 @@
 # Compare RMSprop with momentum vs. Adam
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFlow
+# For the class data_load_forecast Science: Practical Deep Learning Concepts in Theano and TensorFlow
 # https://deeplearningcourses.com/c/data-science-deep-learning-in-theano-tensorflow
 # https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
 from __future__ import print_function, division

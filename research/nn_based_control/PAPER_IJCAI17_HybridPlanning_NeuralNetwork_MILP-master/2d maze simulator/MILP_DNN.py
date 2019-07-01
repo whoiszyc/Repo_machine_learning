@@ -141,7 +141,7 @@ def PathFinder(path):
     fullpath = os.path.join(script_dir,path)
     return fullpath
 
-#Read Data for Deep Learning
+#Read data_load_forecast for Deep Learning
 def ReadData(path):
     fullpath=PathFinder(path)
     return genfromtxt(fullpath, delimiter=',')

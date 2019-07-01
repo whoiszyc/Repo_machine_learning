@@ -104,7 +104,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # The data for this project is a set of many thousands of English to
 # French translation pairs.
 #
-# `This question on Open Data Stack
+# `This question on Open data_load_forecast Stack
 # Exchange <https://opendata.stackexchange.com/questions/3888/dataset-of-sentences-translated-into-many-languages>`__
 # pointed me to the open translation site https://tatoeba.org/ which has
 # downloads available at https://tatoeba.org/eng/downloads - and better
@@ -483,7 +483,7 @@ class AttnDecoderRNN(nn.Module):
 # Training
 # ========
 #
-# Preparing Training Data
+# Preparing Training data_load_forecast
 # -----------------------
 #
 # To train, for each pair we will need an input tensor (indexes of the

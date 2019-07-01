@@ -18,7 +18,7 @@ def load_data(path):
 
 def preprocess_and_save_data(source_path, target_path, text_to_ids):
     """
-    Preprocess Text Data.  Save to to file.
+    Preprocess Text data_load_forecast.  Save to to file.
     """
     # Preprocess
     source_text = load_data(source_path)
@@ -32,7 +32,7 @@ def preprocess_and_save_data(source_path, target_path, text_to_ids):
 
     source_text, target_text = text_to_ids(source_text, target_text, source_vocab_to_int, target_vocab_to_int)
 
-    # Save Data
+    # Save data_load_forecast
     with open('preprocess.p', 'wb') as out_file:
         pickle.dump((
             (source_text, target_text),

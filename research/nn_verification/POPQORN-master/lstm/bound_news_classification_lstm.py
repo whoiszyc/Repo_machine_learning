@@ -127,7 +127,7 @@ if __name__ == '__main__':
     train_iterator, test_iterator = data.BucketIterator.splits(
             (train_dataset, test_dataset), 
     batch_size=args.N, shuffle=True, device=device, sort_key=lambda x:1)
-    print('Finished Loading News Title Data')
+    print('Finished Loading News Title data_load_forecast')
 
 
     #load model

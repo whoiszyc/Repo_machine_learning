@@ -490,7 +490,7 @@ print(model_ft)
 
 
 ######################################################################
-# Load Data
+# Load data_load_forecast
 # ---------
 # 
 # Now that we know what the input size must be, we can initialize the data
@@ -499,7 +499,7 @@ print(model_ft)
 # `here <https://pytorch.org/docs/master/torchvision/models.html>`__.
 # 
 
-# Data augmentation and normalization for training
+# data_load_forecast augmentation and normalization for training
 # Just normalization for validation
 data_transforms = {
     'train': transforms.Compose([

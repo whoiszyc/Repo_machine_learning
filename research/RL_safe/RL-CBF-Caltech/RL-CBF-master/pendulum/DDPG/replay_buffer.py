@@ -1,5 +1,5 @@
 """ 
-Data structure for implementing experience replay
+data_load_forecast structure for implementing experience replay
 
 Author: Patrick Emami
 """

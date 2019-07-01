@@ -69,7 +69,7 @@ def _preprocess_and_save(normalize, one_hot_encode, features, labels, filename):
 
 def preprocess_and_save_data(cifar10_dataset_folder_path, normalize, one_hot_encode):
     """
-    Preprocess Training and Validation Data
+    Preprocess Training and Validation data_load_forecast
     """
     n_batches = 5
     valid_features = []

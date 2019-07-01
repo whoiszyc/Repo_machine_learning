@@ -19,7 +19,7 @@ class IncludeDirective(Directive):
 
     Example usage:
 
-    .. includenodoc:: /beginner/examples_tensor/two_layer_net_tensor.py
+    .. includenodoc:: /beginner/examples_1_tensor/two_layer_net_tensor.py
 
     """
 

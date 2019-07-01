@@ -2,7 +2,7 @@
 # This code is not optimized for speed.
 # It's just to get something working, using the principles we know.
 
-# For the class Data Science: Practical Deep Learning Concepts in Theano and TensorFlow
+# For the class data_load_forecast Science: Practical Deep Learning Concepts in Theano and TensorFlow
 # https://deeplearningcourses.com/c/data-science-deep-learning-in-theano-tensorflow
 # https://www.udemy.com/data-science-deep-learning-in-theano-tensorflow
 from __future__ import print_function, division

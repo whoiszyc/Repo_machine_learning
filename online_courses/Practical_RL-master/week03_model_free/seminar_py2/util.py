@@ -12,7 +12,7 @@ import heapq, random
 
 
 """
- Data structures useful for implementing SearchAgents
+ data_load_forecast structures useful for implementing SearchAgents
 """
 
 class Stack:
@@ -99,7 +99,7 @@ def manhattanDistance( xy1, xy2 ):
   return abs( xy1[0] - xy2[0] ) + abs( xy1[1] - xy2[1] )
 
 """
-  Data structures and functions useful for various course projects
+  data_load_forecast structures and functions useful for various course projects
   
   The search project should not need anything below this line.
 """

@@ -64,7 +64,7 @@ sess.run(init_vars)
 
 # Training
 for i in range(1, num_steps + 1):
-    # Prepare Data
+    # Prepare data_load_forecast
     # Get the next batch of MNIST trainSet (only images are needed, not labels)
     batch_x, batch_y = mnist.train.next_batch(batch_size)
     _, l = sess.run([train_op, loss_op], feed_dict={X: batch_x, Y: batch_y})

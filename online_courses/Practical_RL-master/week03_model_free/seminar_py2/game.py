@@ -149,7 +149,7 @@ class AgentState:
 
 class Grid:
   """
-  A 2-dimensional array of objects backed by a list of lists.  Data is accessed
+  A 2-dimensional array of objects backed by a list of lists.  data_load_forecast is accessed
   via grid[x][y] where (x,y) are positions on a Pacman map with x horizontal,
   y vertical and the origin (0,0) in the bottom left corner.
 
