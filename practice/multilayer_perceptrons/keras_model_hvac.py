@@ -19,16 +19,11 @@ from keras.layers import Dense, Activation,Dropout
 from keras.models import Sequential
 from keras.regularizers import l1,l2
 from keras.models import load_model
-
-# import tensorflow as tf  # @ZYC comment out
-# tf.python.control_flow_ops = tf  # @ZYC comment out
 from keras.layers import Input, Dense
-from keras.layers import concatenate  # @ZYC changed from: from keras.layers import merge
+from keras.layers import concatenate
 from keras.models import Model
 from keras import backend as K
 
-# from theano.tensor.nnet import relu  # @ZYC comment out
-from torch.nn.functional import relu  # @ZYC add
 
 #Given local path, find full path
 def PathFinder(path):
@@ -67,24 +62,20 @@ class DenselyConnectedNetwork(object):
         self.drop_out = drop_out
         self.boost = boost
 
+        # input layer
         inputs = Input(shape=(observ,))
+
+        # hidden layer
         x = Dense(hidden, activation='relu')(inputs)
         # x = Dropout(drop_out)(x)
 
-        if num_layers > 1:
-            for i in range(num_layers - 1):
-                x = Dense(hidden, activation='relu')(x)
-                # x = Dropout(drop_out)(x)
-        ## OP 1:
-        # interm_inputs = concatenate([x, inputs])  # @ZYC changed from: interm_inputs = merge([x, inputs], mode='concat')
-        # predictions = Dense(output, activation='linear')(interm_inputs) # @ZYC comment out
-        ## OP 2:
+        # output layer
         predictions = Dense(output, activation='linear')(x)  # @ZYC add
+
+        # create model using input and output object
         self.DeepNet = Model(input=inputs, output=predictions)
 
-        ## OP 1:
-        # self.DeepNet.compile(optimizer='rmsprop', loss=self.boosted_mean_squared_error)
-        ## OP 2:
+        # define optimizer
         self.DeepNet.compile(optimizer='rmsprop', loss='mean_squared_error')
 
 
