@@ -14,15 +14,15 @@ from numpy import genfromtxt
 import matplotlib.pyplot as plt
 from scipy.spatial import distance
 
-#KERAS
-from keras.layers import Dense, Activation,Dropout
-from keras.models import Sequential
-from keras.regularizers import l1,l2
-from keras.models import load_model
+# KERAS
+from keras import backend as K
+from keras.layers import Dense, Activation, Dropout
 from keras.layers import Input, Dense
 from keras.layers import concatenate
+from keras.regularizers import l1
+from keras.models import Sequential
+from keras.models import load_model
 from keras.models import Model
-from keras import backend as K
 
 
 #Given local path, find full path
@@ -53,7 +53,7 @@ def Normalize(features, mean = [], std = []):
 
 
 
-class DenselyConnectedNetwork(object):
+class MLP(object):
     '''
 
     '''
@@ -67,16 +67,17 @@ class DenselyConnectedNetwork(object):
 
         # hidden layer
         x = Dense(hidden, activation='relu')(inputs)
+        # x = Dense(hidden, activation='relu', activity_regularizer=l1(0.01))(inputs)
         # x = Dropout(drop_out)(x)
 
         # output layer
         predictions = Dense(output, activation='linear')(x)  # @ZYC add
 
         # create model using input and output object
-        self.DeepNet = Model(input=inputs, output=predictions)
+        self.model = Model(input=inputs, output=predictions)
 
         # define optimizer
-        self.DeepNet.compile(optimizer='rmsprop', loss='mean_squared_error')
+        self.model.compile(optimizer='rmsprop', loss='mean_squared_error')
 
 
     def Train(self, data, label, epoch, normalize=False):
@@ -86,7 +87,7 @@ class DenselyConnectedNetwork(object):
             normalized_data, mean, std = Normalize(data)
         else:
             normalized_data = data
-        self.history = self.DeepNet.fit(normalized_data, label, validation_split=0.1, batch_size=128, nb_epoch=epoch)
+        self.history = self.model.fit(normalized_data, label, validation_split=0.1, batch_size=128, nb_epoch=epoch)
         return mean, std
 
 
@@ -95,19 +96,19 @@ class DenselyConnectedNetwork(object):
             normalized_datapoint, _, _ = Normalize(datapoint, mean, std)
         else:
             normalized_datapoint = datapoint
-        return self.DeepNet.predict(normalized_datapoint, batch_size=128, verbose=0)
+        return self.model.predict(normalized_datapoint, batch_size=128, verbose=0)
 
 
     def LoadModel(self, modelpath):
-        self.DeepNet = load_model(modelpath)
+        self.model = load_model(modelpath)
 
 
     def Save(self, modelpath):
-        self.DeepNet.save(modelpath)
+        self.model.save(modelpath)
 
 
     def GetModel(self):
-        return self.DeepNet
+        return self.model
 
 
     def ShowHistory(self):
@@ -124,7 +125,7 @@ class DenselyConnectedNetwork(object):
 
 
 
-def trainNetForData(Datapath,Labelpath,node_size,layer_num,train_type,problem,normalize=False):
+def trainNetForData(Datapath, Labelpath, node_size, layer_num, nb_epoch, normalize=False):
     # read data
     # feature data including actions and states         [u_t, s_t; u_t+1, s_t+1]
     # target data only including states at next step    [   s_t+1;     s_t+2]
@@ -132,8 +133,8 @@ def trainNetForData(Datapath,Labelpath,node_size,layer_num,train_type,problem,no
     PD_Label = ReadData(Labelpath)
 
     # transfer data into matrices (tensor)
-    Full_Data=PD_Data.as_matrix()
-    Full_Label=PD_Label.as_matrix()
+    Full_Data = PD_Data.as_matrix()
+    Full_Label = PD_Label.as_matrix()
 
     # # Randomly permute a sequence, or return a permuted range.
     # indecs=np.random.permutation(len(Full_Data))
@@ -141,10 +142,8 @@ def trainNetForData(Datapath,Labelpath,node_size,layer_num,train_type,problem,no
     # Full_Label=Full_Label[indecs]
 
     # get dimension
-    m_data,n_data=Full_Data.shape
-    m_label,n_label=Full_Label.shape
-
-    # inPutFiles(PD_Data,PD_Label,n_data,n_label,'D',layer_num+1,problem,train_type)#Could be Delta
+    m_data, n_data = Full_Data.shape
+    m_label, n_label = Full_Label.shape
 
     # split data into training set and testing set
     Train_Data = Full_Data[:int(m_data*0.9)]
@@ -154,11 +153,11 @@ def trainNetForData(Datapath,Labelpath,node_size,layer_num,train_type,problem,no
     Test_Label = Full_Label[int(m_data*0.9):]
 
     # train the neural networks
-    DNN=DenselyConnectedNetwork(n_data,node_size,n_label,layer_num,0.1,Label_Weights)
-    mean_DNN,std_DNN=DNN.Train(Train_Data, Train_Label,10,normalize)
-    DNN.ShowHistory()
+    dnn = MLP(n_data, node_size, n_label, layer_num, 0.1, Label_Weights)
+    mean_DNN, std_DNN = dnn.Train(Train_Data, Train_Label, nb_epoch, normalize)
+    dnn.ShowHistory()
 
-    return DNN,Test_Data,Test_Label,mean_DNN,std_DNN
+    return dnn, Test_Data, Test_Label, mean_DNN, std_DNN
 
 
 
@@ -171,10 +170,10 @@ if __name__=="__main__":
     Labelpath="data_hvac/HVAC_COMPLEX_LABEL.txt"
 
     # Build Neural networks and perform training
-    DNN,Test_Data,Test_Label,mean_DNN,std_DNN=trainNetForData(Datapath,Labelpath,32,1,'regular','HVAC_COMPLEX',False)
+    dnn,Test_Data,Test_Label,mean_DNN,std_DNN = trainNetForData(Datapath, Labelpath, 32, 1, 20, False)
 
     # Test
-    Pred_Label = DNN.Test(Test_Data,False,mean_DNN,std_DNN)
+    Pred_Label = dnn.Test(Test_Data,False,mean_DNN,std_DNN)
     # print("Complete testing")
     # Feed_Data = Test_Data[:20,6:]
     # performanceViz(Feed_Data[:],Test_Label[:20],Pred_Label[:20],20)
@@ -189,5 +188,4 @@ if __name__=="__main__":
     # plt.savefig('Comparison_Keras.png')
 
     # Save model
-    # DNN.DeepNet.save('HVAC.h5')
-
+    dnn.model.save('HVAC.h5')
