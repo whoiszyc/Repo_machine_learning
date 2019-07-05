@@ -1,5 +1,5 @@
 import tensorflow as tf
-import cifar10 
+# import cifar10
 
 
 x = tf.placeholder("float")
