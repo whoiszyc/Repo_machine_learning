@@ -70,8 +70,8 @@ error = testY - hatY
 
 # plot
 plt.figure()
-plt.plot(testY)
-plt.plot(hatY)
+plt.plot(testY[0+24*300:23+24*300])
+plt.plot(hatY[0+24*300:23+24*300])
 plt.title('Load Forecasting')
 plt.show()
 
@@ -79,5 +79,11 @@ plt.show()
 plt.figure()
 plt.plot(error)
 plt.title('Load Forecasting Error')
+plt.show()
+
+# plot
+plt.figure()
+plt.plot(testY[0+24*300:23+24*300])
+plt.title('Load Forecasting')
 plt.show()
 
