@@ -43,7 +43,7 @@ with tf.Session() as sess:
             _, c = sess.run([train, loss],
                                feed_dict={x: batch_x, y: batch_y})
             epoch_loss += c / batch_steps
-        print ('Epoch %02d, Loss = %.6f' % (epoch, epoch_loss))
+        print('Epoch %02d, Loss = %.6f' % (epoch, epoch_loss))
 
     # Test model
     correct_prediction = tf.equal(tf.argmax(y_hat, 1), tf.argmax(y, 1))
