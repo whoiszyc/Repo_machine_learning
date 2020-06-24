@@ -29,7 +29,7 @@ y = tf.placeholder(tf.float32, [None, n_classes], name='placeholder_y')
 y_hat = multilayer_perceptron(x)
 
 loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=y_hat, labels=y))
-train = tf.train.AdamOptimizer(learning_rate= eta).minimize(loss)
+train = tf.train.AdamOptimizer(learning_rate=eta).minimize(loss)
 init = tf.global_variables_initializer()
 
 
