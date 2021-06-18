@@ -3,11 +3,11 @@
 Multi-GPU Examples
 ==================
 
-data_load_forecast Parallelism is when we split the mini-batch of samples into
+Data Parallelism is when we split the mini-batch of samples into
 multiple smaller mini-batches and run the computation for each of the
 smaller mini-batches in parallel.
 
-data_load_forecast Parallelism is implemented using ``torch.nn.DataParallel``.
+Data Parallelism is implemented using ``torch.nn.DataParallel``.
 One can wrap a Module in ``DataParallel`` and it will be parallelized
 over multiple GPUs in the batch dimension.
 
@@ -41,7 +41,7 @@ class DataParallelModel(nn.Module):
 # The code does not need to be changed in CPU-mode.
 #
 # The documentation for DataParallel can be found
-# `here <https://pytorch.org/docs/nn.html#dataparallel>`_.
+# `here <https://pytorch.org/docs/stable/nn.html#dataparallel-layers-multi-gpu-distributed>`_.
 # 
 # **Attributes of the wrapped module**
 # 

@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-Translation with a Sequence to Sequence Network and Attention
-*************************************************************
+NLP From Scratch: Translation with a Sequence to Sequence Network and Attention
+*******************************************************************************
 **Author**: `Sean Robertson <https://github.com/spro/practical-pytorch>`_
+
+This is the third and final tutorial on doing "NLP From Scratch", where we
+write our own classes and functions to preprocess the data to do our NLP
+modeling tasks. We hope after you complete this tutorial that you'll proceed to
+learn how `torchtext` can handle much of this preprocessing for you in the
+three tutorials immediately following this one.
 
 In this project we will be teaching a neural network to translate from
 French to English.
@@ -70,17 +76,6 @@ and :doc:`/intermediate/char_rnn_generation_tutorial`
 helpful as those concepts are very similar to the Encoder and Decoder
 models, respectively.
 
-And for more, read the papers that introduced these topics:
-
--  `Learning Phrase Representations using RNN Encoder-Decoder for
-   Statistical Machine Translation <https://arxiv.org/abs/1406.1078>`__
--  `Sequence to Sequence Learning with Neural
-   Networks <https://arxiv.org/abs/1409.3215>`__
--  `Neural Machine Translation by Jointly Learning to Align and
-   Translate <https://arxiv.org/abs/1409.0473>`__
--  `A Neural Conversational Model <https://arxiv.org/abs/1506.05869>`__
-
-
 **Requirements**
 """
 from __future__ import unicode_literals, print_function, division
@@ -104,7 +99,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # The data for this project is a set of many thousands of English to
 # French translation pairs.
 #
-# `This question on Open data_load_forecast Stack
+# `This question on Open Data Stack
 # Exchange <https://opendata.stackexchange.com/questions/3888/dataset-of-sentences-translated-into-many-languages>`__
 # pointed me to the open translation site https://tatoeba.org/ which has
 # downloads available at https://tatoeba.org/eng/downloads - and better
@@ -144,7 +139,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # the networks later. To keep track of all this we will use a helper class
 # called ``Lang`` which has word → index (``word2index``) and index → word
 # (``index2word``) dictionaries, as well as a count of each word
-# ``word2count`` to use to later replace rare words.
+# ``word2count`` which will be used to replace rare words later.
 #
 
 SOS_token = 0
@@ -410,7 +405,7 @@ class DecoderRNN(nn.Module):
 # Attention Decoder
 # ^^^^^^^^^^^^^^^^^
 #
-# If only the context vector is passed betweeen the encoder and decoder,
+# If only the context vector is passed between the encoder and decoder,
 # that single vector carries the burden of encoding the entire sentence.
 #
 # Attention allows the decoder network to "focus" on a different part of
@@ -483,7 +478,7 @@ class AttnDecoderRNN(nn.Module):
 # Training
 # ========
 #
-# Preparing Training data_load_forecast
+# Preparing Training Data
 # -----------------------
 #
 # To train, for each pair we will need an input tensor (indexes of the
@@ -521,7 +516,7 @@ def tensorsFromPair(pair):
 # each next input, instead of using the decoder's guess as the next input.
 # Using teacher forcing causes it to converge faster but `when the trained
 # network is exploited, it may exhibit
-# instability <http://minds.jacobs-university.de/sites/default/files/uploads/papers/ESNTutorialRev.pdf>`__.
+# instability <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.378.4095&rep=rep1&type=pdf>`__.
 #
 # You can observe outputs of teacher-forced networks that read with
 # coherent grammar but wander far from the correct translation -
