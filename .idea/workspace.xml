@@ -1,8 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9338394-a72f-4364-9cca-536ab47f5745" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="e9338394-a72f-4364-9cca-536ab47f5745" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/gongzhong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第10章 隐马尔可夫模型(HMM)/HMM.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第11章 条件随机场(CRF)/CRF.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第11章 条件随机场/.ipynb_checkpoints/CRF-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第1章 统计学习方法概论(LeastSquaresMethod)/least_sqaure_method.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第2章 感知机(Perceptron)/Iris_perceptron.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第3章 k近邻法(KNearestNeighbors)/KDT.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第3章 k近邻法(KNearestNeighbors)/KNN.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第4章 朴素贝叶斯(NaiveBayes)/GaussianNB.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第5章 决策树(DecisonTree)/DT.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第5章 决策树(DecisonTree)/Decision Tree (ID3 剪枝)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第5章 决策树(DecisonTree)/mytree.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第6章 逻辑斯谛回归(LogisticRegression)/LR.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第6章 逻辑斯谛回归(LogisticRegression)/最大熵模型 IIS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第7章 支持向量机(SVM)/support-vector-machine.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第8章 提升方法(AdaBoost)/Adaboost.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/code/第9章 EM算法及其推广(EM)/em.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/images/1543246677825.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/images/gongzhong.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第10章 隐马尔科夫模型.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第11章 条件随机场.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第12章 统计学习方法总结.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第1章  统计学习方法概论.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第2章 感知机.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第3章  k 近邻法.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第4章  朴素贝叶斯法.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第5章  决策树-2016-ID3CART.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第6章 Logistic回归.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第7章 支持向量机.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第8章 提升方法.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/ppt/第9章  EM算法及其推广.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tutorial_machine_learning/lihang-code-master/readme.md" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +54,7 @@
     <option name="width" value="2418" />
     <option name="height" value="1100" />
   </component>
+  <component name="ProjectId" id="1u8PqqiT0ifxyZ84nqIuaLq64OF" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -36,21 +74,16 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,5 +118,16 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
