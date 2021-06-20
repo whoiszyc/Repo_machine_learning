@@ -81,7 +81,7 @@ import glob
 import os
 import unicodedata
 import string
-
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 all_letters = string.ascii_letters + " .,;'-"
 n_letters = len(all_letters) + 1 # Plus EOS marker
 

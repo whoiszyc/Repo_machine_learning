@@ -41,19 +41,9 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
 .cache
-nosetests.xml
-coverage.xml
-*,cover
-.hypothesis/
 
-# Translations
-*.mo
-*.pot
+
 
 # Django stuff:
 # *.log
@@ -70,7 +60,7 @@ target/
 
 # Editor files
 #mac
-.DS_Store
+.DS_Store/
 *~
 
 #vim
@@ -84,8 +74,5 @@ target/
 .vscode/*
 
 #Ipython Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
-#Andes dat and lst files
-*.dat
-*.lst
