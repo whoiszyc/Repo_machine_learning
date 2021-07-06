@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9338394-a72f-4364-9cca-536ab47f5745" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/[Pytorch]deeplearning-models-master/pytorch_ipynb/rnn/rnn_simple_imdb.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Repo_machine_learning.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Repo_machine_learning.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Pytorch]deeplearning-models-master/pytorch_ipynb/rnn/rnn_simple_imdb.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Pytorch]deeplearning-models-master/pytorch_ipynb/rnn/rnn_simple_imdb.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Pytorch]deeplearning-models-master/pytorch_ipynb/rnn/rnn_simple_packed_imdb.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/[Pytorch]deeplearning-models-master/pytorch_ipynb/rnn/rnn_simple_packed_imdb.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/intermediate_source/char_rnn_classification_tutorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/intermediate_source/char_rnn_classification_tutorial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/intermediate_source/char_rnn_generation_tutorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/intermediate_source/char_rnn_generation_tutorial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial.py" beforeDir="false" afterPath="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,10 +54,57 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.char_rnn_generation_tutorial">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.autogradqs_tutorial_1">
+    <configuration name="autogradqs_tutorial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Repo_machine_learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="autogradqs_tutorial_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Repo_machine_learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial_1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="char_rnn_classification_tutorial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Repo_machine_learning" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.char_rnn_generation_tutorial" />
-        <item itemvalue="Python.char_rnn_classification_tutorial" />
-        <item itemvalue="Python.char_rnn_classification_tutorial" />
-        <item itemvalue="Python.rnn_simple_imdb" />
-        <item itemvalue="Python.rnn_simple_imdb" />
+        <item itemvalue="Python.autogradqs_tutorial_1" />
+        <item itemvalue="Python.autogradqs_tutorial" />
+        <item itemvalue="Python.autogradqs_tutorial" />
+        <item itemvalue="Python.autogradqs_tutorial" />
+        <item itemvalue="Python.autogradqs_tutorial" />
       </list>
     </recent_temporary>
   </component>
@@ -212,6 +253,11 @@
           <url>file://$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/intermediate_source/char_rnn_generation_tutorial.py</url>
           <line>272</line>
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/[Pytorch]pytorch_official/tutorials-master/beginner_source/basics/autogradqs_tutorial.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
